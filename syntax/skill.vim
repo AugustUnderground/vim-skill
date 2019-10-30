@@ -102,11 +102,6 @@ syn match   skillSymbol             "\c['`]\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0
 syn match   skillArrow              "\c->\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 syn match   skillSquiggle           "\c~>\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 
-syntax match skillQuote             "'"
-syntax match skillQuote             "`"
-syntax match skillAccess            "\~>"
-syntax match skillAccess            "\->"
-
 syn sync ccomment skillComment minlines=10
 
 " Define the default highlighting.
