@@ -124,7 +124,6 @@ hi def link skillVarArg         Operator
 hi def link skillSymbol         Special
 hi def link skillArrow          Operator
 hi def link skillSquiggle       Operator
-hi def link skillAccess         Constant
 hi def link skillFunction		Function
 hi def link skillKeywords		Define
 hi def link skillConditional	Conditional
