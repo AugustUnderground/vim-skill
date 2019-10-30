@@ -18,42 +18,50 @@ syn keyword skillConstants t nil unbound
 
 " enumerate all the SKILL reserved words/functions
 
-syntax keyword skillConditional caseq\= cond if then else when unless 
+syntax keyword skillConditional caseq cond if then else when unless 
 
-syntax keyword skillKeywords begin declare declare\(N\|SQN\)\=Lambda defmacro 
+syntax keyword skillKeywords begin declare declareN declareSQN declareLambda defmacro 
             \ defprop defstruct defun define defUserInitProc 
             \ defvar lambda last let letseq letrec 
             \ list procedure prog return
 
-syntax keyword skillRepeat go for\(all\|each) while 
+syntax keyword skillRepeat go for forall foreach while 
 
-syntax keyword skillFunction abs a\=cos add1 addDefstructClass alias alphalessp alphaNumCmp 
-            \ append1\= apply arrayp arrayref a\=sin assoc ass[qv] a\=tan ato[fim] 
-            \ bcdp booleanp boundp buildString c[ad]{1,3}r ceiling changeWorkingDir 
+syntax keyword skillFunction abs acos cos add1 addDefstructClass alias alphalessp alphaNumCmp 
+            \ append1 apply arrayp arrayref asin sin assoc assq assv atan tan atom
+            \ bcdp booleanp boundp buildString ceiling changeWorkingDir 
+            \ caaaar caaadr caadar caaddr caar cddaar cddadr cdddar cddddr
+            \ caddar cadddr cadr cdaaar cdaadr cdaar cdadar cdaddr cdadr cdar 
+            \ cddaar cddadr cddar cdddar cddddr cdddr cddr caaar caadr cadar 
+            \ caddr cdadr cadaar cadadr caddar cadddr cdaaar cdaadr cdadar cdaddr 
             \ charToInt clearExitProcs close compareTime compress concat cons copy 
-            \ copyDefstructDeep createDir csh defstructp delete\(Dir\|File\) display 
-            \ drain dtpr ed\(i\|l\|it\)\= envobj equal eqv\= err error errset errsetstring 
-            \ eval evalstring evenp exists exit exp expandMacro file\(Length\|Seek\|Tell\|TimeModified\) 
-            \ fixp\= floatp\= floor [fs]\=printf f\=scanf funobj gc gensym get\(_pname\|_string\)\= 
-            \ getc\(har\)\= getCurrentTime getd getDirFiles getFnWriteProtect getRunType getInstallPath 
-            \ getqq\= gets getShellEnvVar getSkill\(Path\|Version\) getVarWriteProtect getVersion getWarn 
-            \ getWorkingDir index infile inportp in\(Scheme\|Skill\) instring integerp intToChar is
-            \ \(Callable\|Dir\|Executable\|File\|FileEncrypted\|FileName\|Link
-            \ \|Macro\|Writable\) lconc length lineread\(string\)\= listp listToVector 
-            \ loadi\= loadstring log lowerCase makeTable makeTempFileName makeVector map\(c\|can\|car\|list\) 
-            \ max measureTime member mem[qv] min minusp mod \(ulo\)\= ncon[cs] needNCells 
-            \ negativep neq\(ual\)\= newline nindex not nth\(cdr\|elem\)\= null numberp 
+            \ copyDefstructDeep createDir csh defstructp delete deleteDir deleteFile display 
+            \ drain dtpr edit envobj equal eqv err error errset errsetstring 
+            \ eval evalstring evenp exists exit exp expandMacro file
+            \ fileLength fileSeek fileTell fileTimeModified
+            \ fixp floatp floor printf fprintf sprintf scanf fscanf funobj gc gensym 
+            \ get get_pname get_string
+            \ getc getchar getCurrentTime getd getDirFiles getFnWriteProtect getRunType getInstallPath 
+            \ getqq getq gets getShellEnvVar getSkill getSkillPath getSkillVersion 
+            \ getVarWriteProtect getVersion getWarn 
+            \ getWorkingDir index infile inportp inScheme inSkill instring integerp intToChar
+            \ isCallable isDir isExecutable isFile isFileEncrypted isFileName isLink
+            \ isMacro isWritable lconc length lineread readstring listp listToVector 
+            \ loadi load loadstring log lowerCase makeTable makeTempFileName makeVector 
+            \ map mapcar mapcan maplist
+            \ max measureTime member memq memv min minusp mod nconc ncons needNCells 
+            \ negativep neq nequal newline nindex not nth nthcdr nthelem null numberp 
             \ numOpenFiles oddp onep otherp outfile outportp pairp parseString plist 
-            \ plusp portp p\=print prependInstallPath printl\(ev\|n\) procedurep putd putpropq\{,2} 
-            \ random read readString readTable realp regExit\(After\|Before\) remainder remdq\= remExitProc 
+            \ plusp portp p\=print prependInstallPath println procedurep putd putpropq putpropqq
+            \ random read readString readTable realp regExitAfter regExitBefore remainder remdq remd remExitProc 
             \ remove remprop remq reverse rexCompile rexExecute rexMagic rexMatchAssocList rexMatchList 
-            \ rexMatchp rexReplace rexSubstitute rindex round rplac[ad] schemeTopLevelEnv set 
-            \ setarray setc[ad]r setFnWriteProtect setof setplist setq setShellEnvVar setSkillPath 
-            \ setVarWriteProtect sh\(ell\)\= simplifyFilename sort\(car\)\= sqrt srandom sstatus 
-            \ strn\=cat strn\=cmp stringp stringTo\(Function\|Symbol\|Time\) strlen sub1 subst 
+            \ rexMatchp rexReplace rexSubstitute rindex round rplacad schemeTopLevelEnv set setq setSGq setSG
+            \ setarray setcdr setcadr setFnWriteProtect setof setplist setShellEnvVar setSkillPath 
+            \ setVarWriteProtect sh shell simplifyFilename sort sortcar sqrt srandom sstatus 
+            \ strn strncat strncmp stringp stringToFunction stringToSymbol stringToTime strlen sub1 subst 
             \ substring sxtd symbolp symbolToString symeval symstrp system tablep tableToList 
-            \ tailp tconc timeToString timeToTm tmToTime truncate typep\= unalias upperCase 
-            \ vector\(ToList\)\= warn write writeTable xcons zerop zxtd 
+            \ tailp tconc timeToString timeToTm tmToTime truncate typep unalias upperCase 
+            \ vector vectorToList warn write writeTable xcons zerop zxtd 
 
 " DFII procedural interface routines
 
