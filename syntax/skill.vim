@@ -103,7 +103,7 @@ syntax match skillNumber            "\v<[-+]?%(0|[1-9]\d*)/%(0|[1-9]\d*)>"
 syn match   skillVarArg             "\c@\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 syn match   skillSymbol             "\c['`]\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 syn match   skillArrow              "\c->\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-syn match   skillSquiggle           "\c~>\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match   skillSquiggle           "\c\~>\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 
 syn sync ccomment skillComment minlines=10
 
