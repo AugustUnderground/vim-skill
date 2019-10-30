@@ -48,7 +48,7 @@ setlocal lispwords+=def,define,defvar,defun,defstruct,defprop,defclass,defmacro
 
 " skillFunc
 setlocal lispwords+=,!=,%,%=,&,&=,*,+,+=,\,-,-=,.,/
-setlocal lispwords+=,//,//=,/=,<,<<,<<=,<=,=,>,>=,>>,>>=,&&,||,-\>,~\>
+setlocal lispwords+=,//,//=,/=,<,<<,<<=,<=,=,>,>=,>>,>>=,&&,||
 
 setlocal lispwords+=,break,return,car,cadr,symbol
 setlocal lispwords+=,print
