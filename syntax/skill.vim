@@ -48,7 +48,7 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias alphaless
             \ isCallable isDir isExecutable isFile isFileEncrypted isFileName isLink
             \ isMacro isWritable lconc length lineread readstring listp listToVector 
             \ loadi load loadstring log lowerCase makeTable makeTempFileName makeVector 
-            \ map mapcar mapcan maplist
+            \ map mapcar mapcan maplist plus difference quotient times
             \ max measureTime member memq memv min minusp mod nconc ncons needNCells 
             \ negativep neq nequal newline nindex not nth nthcdr nthelem null numberp 
             \ numOpenFiles oddp onep otherp outfile outportp pairp parseString plist 
@@ -66,21 +66,24 @@ syntax keyword skillFunction abs acos cos add1 addDefstructClass alias alphaless
 " DFII procedural interface routines
 
 " CDF functions
-syn match skillcdfFunctions			"(cdf\u\a\+\>"hs=s+1
+syn match skillcdfFunctions         "\ccdf\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 " graphic editor functions
-syn match skillgeFunctions			"(ge\u\a\+\>"hs=s+1
+syn match skillgeFunctions          "\cge\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 " human interface functions
-syn match skillhiFunctions			"(hi\u\a\+\>"hs=s+1
+syn match skillhiFunctions          "\chi\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 " layout editor functions
-syn match skillleFunctions			"(le\u\a\+\>"hs=s+1
+syn match skillleFunctions          "\cle\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 " database|design editor|design flow functions
-syn match skilldbefFunctions		"(d[bef]\u\a\+\>"hs=s+1
+syn match skilldbefFunctions        "\cdb\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skilldbefFunctions        "\cde\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skilldbefFunctions        "\cdf\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 " design management & design data services functions
-syn match skillddFunctions			"(dd[s]\=\u\a\+\>"hs=s+1
+syn match skillddFunctions          "\cdd\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 " parameterized cell functions
-syn match skillpcFunctions			"(pc\u\a\+\>"hs=s+1
+syn match skillpcFunctions          "\cpc\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 " tech file functions
-syn match skilltechFunctions		"(\(tech\|tc\)\u\a\+\>"hs=s+1
+syn match skilltechFunctions          "\ctech\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skilltechFunctions          "\ctc\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 
 " strings
 syn region skillString				start=+"+ skip=+\\"+ end=+"+
@@ -113,7 +116,7 @@ hi def link skillhiFunctions    Function
 hi def link skillleFunctions    Function
 hi def link skilldbefFunctions	Function
 hi def link skillddFunctions	Function
-hi def link skillpcFunction		Function
+hi def link skillpcFunctions		Function
 hi def link skilltechFunctions	Function
 hi def link skillConstants		Constant
 hi def link skillQuote          Constant
