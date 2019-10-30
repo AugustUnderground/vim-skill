@@ -13,6 +13,7 @@
 if exists("b:did_indent")
    finish
 endif
+
 let b:did_indent = 1
 let b:undo_indent = "setl ai< si< et< lw< lisp<"
 
@@ -51,5 +52,3 @@ setlocal lispwords+=,//,//=,/=,<,<<,<<=,<=,=,>,>=,>>,>>=,&&,||,->,~>
 
 setlocal lispwords+=,break,return,car,cadr,symbol
 setlocal lispwords+=,print
-
-let &cpo = s:save_cpo
