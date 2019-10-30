@@ -22,10 +22,10 @@ syntax keyword skillConditional caseq\= cond if then else when unless
 
 syntax keyword skillKeywords begin declare declare\(N\|SQN\)\=Lambda defmacro 
             \ defprop defstruct defun define defUserInitProc 
-            \ defvar n\=lambda last let letseq letrec 
-            \ list [mn]\=procedure prog[12n]\= return
+            \ defvar lambda last let letseq letrec 
+            \ list procedure prog return
 
-syntax keyword skillRepeat go for\(all\|each\)\= while 
+syntax keyword skillRepeat go for\(all\|each) while 
 
 syntax keyword skillFunction abs a\=cos add1 addDefstructClass alias alphalessp alphaNumCmp 
             \ append1\= apply arrayp arrayref a\=sin assoc ass[qv] a\=tan ato[fim] 
