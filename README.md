@@ -5,8 +5,12 @@ based on [vim-hy](https://github.com/hylang/vim-hy).
 
 ## Installation
 
-Any vim plugin approach should work for [Vundle](https://github.com/VundleVim/Vundle.vim) just put
+Any vim plugin approach should work.
+For [Vundle](https://github.com/VundleVim/Vundle.vim) just put
 ```
 Plugin 'augustunderground/vim-skill'
 ```
-in your `.vimrc`
+in your `.vimrc` and then run
+```
+:PluginInstall
+```
