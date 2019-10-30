@@ -97,7 +97,10 @@ syntax match skillNumber            "\v<[-+]?%(0\o*|0x\x+|[1-9]\d*)N?>"
 syntax match skillNumber            "\v<[-+]?%(0|[1-9]\d*|%(0|[1-9]\d*)\.\d*)%(M|[eE][-+]?\d+)?>"
 syntax match skillNumber            "\v<[-+]?%(0|[1-9]\d*)/%(0|[1-9]\d*)>"
 
-syn match   skillVarArg             "\c:\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match   skillVarArg             "\c@\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match   skillSymbol             "\c['`]\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match   skillArrow              "\c->\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match   skillSquiggle           "\c~>\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 
 syntax match skillQuote             "'"
 syntax match skillQuote             "`"
@@ -120,12 +123,16 @@ hi def link skilltechFunctions	Function
 hi def link skillConstants		Constant
 hi def link skillQuote          Constant
 hi def link skillVarArg         Operator
+hi def link skillSymbol         Operator
+hi def link skillArrow          Operator
+hi def link skillSquiggle       Operator
 hi def link skillAccess         Constant
 hi def link skillFunction		Function
 hi def link skillKeywords		Function
 hi def link skillConditional	Conditional
 hi def link skillRepeat			Repeat
 hi def link skillString			String
+hi def link skillNumber			Number
 hi def link skillTodo			Todo
 hi def link skillNote			Todo
 hi def link skillComment		Comment
