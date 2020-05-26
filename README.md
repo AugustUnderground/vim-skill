@@ -9,11 +9,14 @@ SKILL / Virtuoso REPL integration (**only NeoVim**).
 
 Any vim plugin approach should work.
 For [Vim-Plug](https://github.com/junegunn/vim-plug) just put
-```
+
+```vim
 Plug 'augustunderground/vim-skill'
 ```
+
 in your `init.vim` and then run
-```
+
+```vim
 :PlugInstall
 ```
 
@@ -36,7 +39,7 @@ non-interactively with the command defined in `g:skill_cmpl`
 
 Default key mappings are:
 
-```{vim}
+```vim
 map <F11> :call SkillRun()<CR>
 map <F12> :call SkillOpen()<CR>
 nnoremap <silent> <leader>l :SkillSendLine<cr>
@@ -49,14 +52,14 @@ When calling `SkillOpen` a new
 is opened and a SKILL REPL is launched.
 Set `g:skill_repl` to the appropriate SKILL Interpreter.
 
-```{vim}
+```vim
 let g:skill_repl = 'rlwrap virtuoso -nographE'
 ```
 
 Calling `SkillRun` executes the script in the current buffer
 with the command defined in `g:skill_cmpl`.
 
-```{vim}
+```vim
 let g:skill_cmpl = 'virtuoso -nographE -restore'
 ```
 
