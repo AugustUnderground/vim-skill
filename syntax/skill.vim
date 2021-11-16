@@ -27,63 +27,76 @@ syntax keyword skillKeywords begin declare declareN declareSQN declareLambda def
 
 syntax keyword skillRepeat go for forall foreach while 
 
-syntax keyword skillFunction abs acos cos add1 addDefstructClass alias alphalessp alphaNumCmp 
-            \ append1 apply arrayp arrayref asin sin assoc assq assv atan tan atom
-            \ bcdp booleanp boundp buildString ceiling changeWorkingDir 
-            \ caaaar caaadr caadar caaddr caar cddaar cddadr cdddar cddddr
-            \ caddar cadddr cadr cdaaar cdaadr cdaar cdadar cdaddr cdadr cdar 
-            \ cddaar cddadr cddar cdddar cddddr cdddr cddr caaar caadr cadar 
-            \ caddr cdadr cadaar cadadr caddar cadddr cdaaar cdaadr cdadar cdaddr 
-            \ charToInt clearExitProcs close compareTime compress concat cons copy 
-            \ copyDefstructDeep createDir csh defstructp delete deleteDir deleteFile display 
-            \ drain dtpr edit envobj equal eqv err error errset errsetstring 
-            \ eval evalstring evenp exists exit exp expandMacro file
-            \ fileLength fileSeek fileTell fileTimeModified
-            \ fixp floatp floor printf fprintf sprintf scanf fscanf funobj gc gensym 
-            \ get get_pname get_string
-            \ getc getchar getCurrentTime getd getDirFiles getFnWriteProtect getRunType getInstallPath 
-            \ getqq getq gets getShellEnvVar getSkill getSkillPath getSkillVersion 
-            \ getVarWriteProtect getVersion getWarn 
-            \ getWorkingDir index infile inportp inScheme inSkill instring integerp intToChar
-            \ isCallable isDir isExecutable isFile isFileEncrypted isFileName isLink
-            \ isMacro isWritable lconc length lineread readstring listp listToVector 
-            \ loadi load loadstring log lowerCase makeTable makeTempFileName makeVector 
-            \ map mapcar mapcan maplist plus difference quotient times
-            \ max measureTime member memq memv min minusp mod nconc ncons needNCells 
-            \ negativep neq nequal newline nindex not nth nthcdr nthelem null numberp 
-            \ numOpenFiles oddp onep otherp outfile outportp pairp parseString plist 
-            \ plusp portp p\=print prependInstallPath println procedurep putd putpropq putpropqq
-            \ random read readString readTable realp regExitAfter regExitBefore remainder remdq remd remExitProc 
-            \ remove remprop remq reverse rexCompile rexExecute rexMagic rexMatchAssocList rexMatchList 
-            \ rexMatchp rexReplace rexSubstitute rindex round rplacad schemeTopLevelEnv set setq setSGq setSG
-            \ setarray setcdr setcadr setFnWriteProtect setof setplist setShellEnvVar setSkillPath 
-            \ setVarWriteProtect sh shell simplifyFilename sort sortcar sqrt srandom sstatus 
-            \ strn strncat strncmp stringp stringToFunction stringToSymbol stringToTime strlen sub1 subst 
-            \ substring sxtd symbolp symbolToString symeval symstrp system tablep tableToList 
-            \ tailp tconc timeToString timeToTm tmToTime truncate typep unalias upperCase 
-            \ vector vectorToList warn write writeTable xcons zerop zxtd 
+syntax keyword skillFunction abs acos cos add1 addDefstructClass alias
+            \ alphalessp alphaNumCmp append1 apply arrayp arrayref asin sin
+            \ assoc assq assv atan tan atom bcdp booleanp boundp buildString
+            \ ceiling changeWorkingDir caaaar caaadr caadar caaddr caar cddaar
+            \ cddadr cdddar cddddr caddar cadddr cadr cdaaar cdaadr cdaar 
+            \ cdadar cdaddr cdadr cdar cddaar cddadr cddar cdddar cddddr cdddr 
+            \ cddr caaar caadr cadar caddr cdadr cadaar cadadr caddar cadddr 
+            \ cdaaar cdaadr cdadar cdaddr charToInt clearExitProcs close 
+            \ compareTime compress concat cons copy copyDefstructDeep createDir 
+            \ csh defstructp delete deleteDir deleteFile display drain dtpr
+            \ edit envobj equal eqv err error errset errsetstring eval
+            \ evalstring evenp exists exit exp expandMacro file fileLength
+            \ fileSeek fileTell fileTimeModified fixp floatp floor printf
+            \ fprintf sprintf scanf fscanf funobj gc gensym get get_pname
+            \ get_string getc getchar getCurrentTime getd getDirFiles
+            \ getFnWriteProtect getRunType getInstallPath getqq getq gets
+            \ getShellEnvVar getSkill getSkillPath getSkillVersion
+            \ getVarWriteProtect getVersion getWarn getWorkingDir index infile
+            \ inportp inScheme inSkill instring integerp intToChar isCallable
+            \ isDir isExecutable isFile isFileEncrypted isFileName isLink
+            \ isMacro isWritable lconc length lineread readstring listp
+            \ listToVector loadi load loadstring log lowerCase makeTable
+            \ makeTempFileName makeVector map mapcar mapcan maplist plus
+            \ difference quotient times max measureTime member memq memv min
+            \ minusp mod nconc ncons needNCells negativep neq nequal newline
+            \ nindex not nth nthcdr nthelem null numberp numOpenFiles oddp
+            \ onep otherp outfile outportp pairp parseString plist plusp portp
+            \ p\=print prependInstallPath print println procedurep putd
+            \ putpropq putpropqq random read readString readTable realp
+            \ regExitAfter regExitBefore remainder remdq remd remExitProc
+            \ remove remprop remq reverse rexCompile rexExecute rexMagic
+            \ rexMatchAssocList rexMatchList rexMatchp rexReplace
+            \ rexSubstitute rindex round rplacad schemeTopLevelEnv set setq
+            \ setSGq setSG setarray setcdr setcadr setFnWriteProtect setof
+            \ setplist setShellEnvVar setSkillPath setVarWriteProtect sh shell
+            \ simplifyFilename sort sortcar sqrt srandom sstatus strn strncat
+            \ strncmp stringp stringToFunction stringToSymbol stringToTime
+            \ strlen sub1 subst substring sxtd symbolp symbolToString symeval
+            \ symstrp system tablep tableToList tailp tconc timeToString
+            \ timeToTm tmToTime truncate typep unalias upperCase vector
+            \ vectorToList warn write writeTable xcons zerop zxtd 
 
 " DFII procedural interface routines
 
 " CDF functions
-syn match skillcdfFunctions         "\ccdf\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skillcdfFunctions  "\ccdf\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+
 " graphic editor functions
-syn match skillgeFunctions          "\cge\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skillgeFunctions   "\cge\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+
 " human interface functions
-syn match skillhiFunctions          "\chi\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skillhiFunctions   "\chi\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+
 " layout editor functions
-syn match skillleFunctions          "\cle\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skillleFunctions   "\cle\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+
 " database|design editor|design flow functions
-syn match skilldbefFunctions        "\cdb\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-syn match skilldbefFunctions        "\cde\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-syn match skilldbefFunctions        "\cdf\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skilldbefFunctions "\cdb\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skilldbefFunctions "\cde\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skilldbefFunctions "\cdf\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+
 " design management & design data services functions
-syn match skillddFunctions          "\cdd\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skillddFunctions   "\cdd\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+
 " parameterized cell functions
-syn match skillpcFunctions          "\cpc\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skillpcFunctions   "\cpc\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+
 " tech file functions
-syn match skilltechFunctions          "\ctech\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
-syn match skilltechFunctions          "\ctc\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skilltechFunctions "\ctech\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
+syn match skilltechFunctions "\ctc\{1,2}[a-z0-9?!\-_+*.=<>#$]\+\(/[a-z0-9?!\-_+*.=<>#$]\+\)\?"
 
 " strings
 syn region skillString				start=+"+ skip=+\\"+ end=+"+
