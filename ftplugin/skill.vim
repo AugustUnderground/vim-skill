@@ -2,11 +2,11 @@
 
 "let g:skill_repl = 'rlwrap skill'
 "let g:skill_repl = 'rlwrap dbAccess'
-let g:skill_repl = 'rlwrap virtuoso -nographE'
+let g:skill_repl = get(g:, 'skill_repl', "rlwrap virtuoso -nographE")
 
 "let g:skill_cmpl = 'dbAccess -load'
 "let g:skill_cmpl = 'virtuoso -replay'
-let g:skill_cmpl = 'virtuoso -nographE -restore'
+let g:skill_cmpl = get(g:, 'skill_cmpl', "virtuoso -nographE -restore")
 
 " Skill Vim
 map <F11> :call SkillRun()<CR>
